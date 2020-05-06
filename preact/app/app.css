@@ -1,0 +1,40 @@
+/* Simple dashboard grid CSS https://medium.com/better-programming/build-a-responsive-modern-dashboard-layout-with-css-grid-and-flexbox-bd343776a97e */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Assign grid instructions to our parent grid container */
+.app-grid-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+}
+
+/* Give every child element its grid name */
+.app-header {
+  grid-area: header;
+  background-color: #648ca6;
+}
+
+.app-sidenav {
+  grid-area: sidenav;
+  background-color: #394263;
+  overflow: auto;
+}
+
+.app-main {
+  grid-area: main;
+  background-color: #8fd4d9;
+  overflow: auto;
+}
+
+.app-footer {
+  grid-area: footer;
+  background-color: #648ca6;
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <title>Preact deno example</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <script type="module">
+    import { App, preact } from "./trinity.bundle.js"
+    const { html, render } = preact
+    console.log(preact)
+    const appData = {
+      auth: 1
+    }
+    render(html`<${App} />`, document.body);
+  </script>
+</body>
+</html>
