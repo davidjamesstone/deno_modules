@@ -83,6 +83,9 @@ const size = filesize.partial({standard: "iec"});
 size(265318); // "259.1 KiB"
 ```
 
+## Test
+`deno test test/*`
+
 ## License
 Copyright (c) 2019 Jason Mulligan
 Copyright (c) 2020 David Stone

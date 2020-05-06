@@ -1,6 +1,6 @@
 import {
   test,
-  assertEquals
+  assertEquals,
 } from "../test_deps.ts";
 import { filesize, Options } from "./mod.ts";
 
@@ -617,16 +617,26 @@ test("localeOptions", () => {
     "Should be '1 KB'",
   );
 
-  assertEquals(filesize(1024, new Options({
-    locale: true,
-    localeOptions: { minimumFractionDigits: 1 },
-  })), "1 KB", "Should be '1 KB'");
+  assertEquals(
+    filesize(
+      1024,
+      new Options({
+        locale: true,
+        localeOptions: { minimumFractionDigits: 1 },
+      }),
+    ),
+    "1 KB",
+    "Should be '1 KB'",
+  );
 
   assertEquals(
-    filesize(1024, new Options({
-      locale: "de",
-      localeOptions: { minimumFractionDigits: 1 },
-    })),
+    filesize(
+      1024,
+      new Options({
+        locale: "de",
+        localeOptions: { minimumFractionDigits: 1 },
+      }),
+    ),
     Number(1).toLocaleString("de", { minimumFractionDigits: 1 }) + " KB",
     "Should be '" +
       Number(1).toLocaleString("de", { minimumFractionDigits: 1 }) + " KB'",

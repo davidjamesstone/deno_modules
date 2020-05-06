@@ -180,7 +180,9 @@ export function filesize(
     if (descriptor.unix) {
       result1 = descriptor.standard === "jedec"
         ? result1.charAt(0)
-        : e > 0 ? result1.replace(/B$/, "") : result1;
+        : e > 0
+        ? result1.replace(/B$/, "")
+        : result1;
 
       if (b.test(result1)) {
         result0 = Math.floor(result0);
