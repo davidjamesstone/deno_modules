@@ -1,7 +1,7 @@
 import { html, Router } from "preact";
 import { Counter } from "./counter.ts";
 
-const HomePage = () => html`<a href="/counter">Routes</a>`;
+const HomePage = () => html`<a href="/counter">Counter</a>`;
 const CounterPage = () => html`<${Counter} initial=${2} />`;
 const SearchPage = () => "Search";
 

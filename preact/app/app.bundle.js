@@ -614,7 +614,7 @@ System.register("components/main", ["preact", "components/counter"], function (e
             }
         ],
         execute: function () {
-            HomePage = () => preact_4.html `<a href="/counter">Routes</a>`;
+            HomePage = () => preact_4.html `<a href="/counter">Counter</a>`;
             CounterPage = () => preact_4.html `<${counter_ts_1.Counter} initial=${2} />`;
             SearchPage = () => "Search";
             exports_5("Main", Main = () => {
@@ -656,7 +656,7 @@ System.register("app", ["preact", "components/header", "components/sidebar", "co
       <${header_ts_1.Header} />
       <${sidebar_ts_1.Sidebar} />
       <${main_ts_1.Main} />
-      <footer class="app-footer">Footer1</footer>
+      <footer class="app-footer">Footer</footer>
     </div>`));
         }
     };

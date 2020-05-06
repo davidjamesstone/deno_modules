@@ -10,6 +10,6 @@ export const App = () => (
       <${Header} />
       <${Sidebar} />
       <${Main} />
-      <footer class="app-footer">Footer1</footer>
+      <footer class="app-footer">Footer</footer>
     </div>`
 );

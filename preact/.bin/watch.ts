@@ -16,7 +16,7 @@ async function bundle() {
 console.log("Watching....");
 
 const debounced = debounce(bundle, 200);
-const paths = ["app/app.ts", "app/components", "lib"];
+const paths = ["app/app.ts", "app/components"];
 
 for await (const event of Deno.watchFs(paths)) {
   console.log(event, Date.now());
