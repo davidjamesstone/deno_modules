@@ -15,7 +15,7 @@ export const Counter = ({ initial }: { initial: number }) => {
   return (
     html`
       <div>
-        Routes ${value}:
+        Value ${value}:
       </div>
       <form onSubmit=${onSubmit}>
         <div class="control">
