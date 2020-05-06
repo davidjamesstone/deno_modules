@@ -587,7 +587,7 @@ System.register("components/counter", ["preact"], function (exports_4, context_4
                 };
                 return (preact_3.html `
       <div>
-        Routes ${value}:
+        Value ${value}:
       </div>
       <form onSubmit=${onSubmit}>
         <div class="control">
@@ -615,7 +615,7 @@ System.register("components/main", ["preact", "components/counter"], function (e
         ],
         execute: function () {
             HomePage = () => preact_4.html `<a href="/counter">Routes</a>`;
-            CounterPage = () => preact_4.html `<${counter_ts_1.Counter} initial=${3} />`;
+            CounterPage = () => preact_4.html `<${counter_ts_1.Counter} initial=${2} />`;
             SearchPage = () => "Search";
             exports_5("Main", Main = () => {
                 return (preact_4.html `

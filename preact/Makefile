@@ -5,7 +5,7 @@ format:
 	deno fmt app/app.ts app/components .bin
 
 bundle:
-	deno bundle --unstable --importmap=app/import_map.json app/app.ts app/trinity.bundle.js
+	deno bundle --unstable --importmap=app/import_map.json app/app.ts app/app.bundle.js
 
 build: format bundle
 
