@@ -66,25 +66,27 @@ _*(boolean)*_ Enables unix style human readable output, e.g `ls -lh`, default is
 
 ## Examples
 
+<!-- prettier-ignore-start -->
 ```javascript
 import { filesize, Options } from "https://deno.land/x/filesize/mod.ts";
-filesize(500); // "500 B"
-filesize(500, new Options({ bits: true })); // "4 Kb"
-filesize(265318, new Options({ base: 10 })); // "265.32 kB"
-filesize(265318); // "259.1 KB"
-filesize(265318, new Options({ round: 0 })); // "259 KB"
-filesize(265318, new Options({ output: "array" })); // [259.1, "KB"]
-filesize(265318, new Options({ output: "object" })); // {value: 259.1, symbol: "KB", exponent: 1}
-filesize(1, new Options({ symbols: { B: "Б" } })); // "1 Б"
-filesize(1024); // "1 KB"
-filesize(1024, new Options({ exponent: 0 })); // "1024 B"
-filesize(1024, new Options({ output: "exponent" })); // 1
-filesize(265318, new Options({ standard: "iec" })); // "259.1 KiB"
+filesize(500);                                        // "500 B"
+filesize(500, new Options({ bits: true }));           // "4 Kb"
+filesize(265318, new Options({ base: 10 }));          // "265.32 kB"
+filesize(265318);                                     // "259.1 KB"
+filesize(265318, new Options({ round: 0 }));          // "259 KB"
+filesize(265318, new Options({ output: "array" }));   // [259.1, "KB"]
+filesize(265318, new Options({ output: "object" }));  // {value: 259.1, symbol: "KB", exponent: 1}
+filesize(1, new Options({ symbols: { B: "Б" } }));    // "1 Б"
+filesize(1024);                                       // "1 KB"
+filesize(1024, new Options({ exponent: 0 }));         // "1024 B"
+filesize(1024, new Options({ output: "exponent" }));  // 1
+filesize(265318, new Options({ standard: "iec" }));   // "259.1 KiB"
 filesize(265318, new Options({ standard: "iec", fullform: true })); // "259.1 kibibytes"
 filesize(12, new Options({ fullform: true, fullforms: ["байтов"] })); // "12 байтов"
-filesize(265318, new Options({ separator: "," })); // "259,1 KB"
-filesize(265318, new Options({ locale: "de" })); // "259.1 KB"
+filesize(265318, new Options({ separator: "," }));    // "259,1 KB"
+filesize(265318, new Options({ locale: "de" }));      // "259.1 KB"
 ```
+<!-- prettier-ignore-end -->
 
 ## Test
 
