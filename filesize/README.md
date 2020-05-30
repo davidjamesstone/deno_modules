@@ -86,21 +86,9 @@ filesize(265318, new Options({ separator: "," })); // "259,1 KB"
 filesize(265318, new Options({ locale: "de" })); // "259.1 KB"
 ```
 
-## Partial Application
-
-`filesize.partial()` takes the second parameter of `filesize()` and returns a new function with the configuration applied
-upon execution. This can be used to reduce `Object` creation if you call `filesize()` without caching the `descriptor`
-in lexical scope.
-
-```javascript
-const size = filesize.partial({ standard: "iec" });
-
-size(265318); // "259.1 KiB"
-```
-
 ## Test
 
-`deno test test/*`
+`deno test test.ts`
 
 ## License
 
