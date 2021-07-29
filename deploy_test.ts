@@ -1,6 +1,8 @@
+let counter = 0
+
 addEventListener("fetch", (event) => {
   event.respondWith(
-    new Response("Hello world!", {
+    new Response("Hello world! " + counter, {
       status: 200,
       headers: {
         server: "denosr",
@@ -9,3 +11,7 @@ addEventListener("fetch", (event) => {
     }),
   );
 });
+
+setInterval(() => {
+  counter++
+}, 5000)
